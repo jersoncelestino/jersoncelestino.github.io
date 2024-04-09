@@ -4,12 +4,14 @@ app = Flask(__name__) #Guardamos en una variable lo que nos devuelve el método 
 #RUTA PARA MANEJAR LA PÁGINA PRINCIPAL
 @app.route('/')#Aqui estamos creando una ruta pra nuestra pagina principal
 def home():
-    return render_template('home.html')#usamos el render_template para llamar a un html
+    with app.app_context():
+        return render_template('home.html')#usamos el render_template para llamar a un html
 
 #RUTA PARA MANEJAR LA PÁGINA ABOUT
 @app.route('/about')#Aqui estamos creando una ruta pra nuestra pagina about
 def about():
-    return render_template('about.html')#usamos el render_template para llamar a un html
+    with app.app_context():
+        return render_template('about.html')#usamos el render_template para llamar a un html
 
 
 #Necesitamos saber si nuestra aplicación está escuchando constantemente
