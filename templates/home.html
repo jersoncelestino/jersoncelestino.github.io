@@ -1,0 +1,15 @@
+<!--Este extends nos permite heredar del layout la estructura-->
+{% extends "layout.html"%}
+
+<!--Con el siguiente código indicamos que a nuestro layout le agregaremos el h1 o lo que deseamos agregar-->
+{% block content %}
+
+<div class="jumbotron">
+    <h1 class="display-4">Hello, world</h1>
+    <p class="lead"> Este es un simple componente de llamado de unidad, para suma atención de distintos elementos</p>
+    <hr class="my-4">
+    <p>Esto es usado en distintas topografias y contenidos de espacios</p>
+    <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+</div>
+
+{% endblock %}
